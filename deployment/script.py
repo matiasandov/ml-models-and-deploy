@@ -28,9 +28,7 @@ def predictForm(predList):
 def result():
     if request.method == 'POST':
         #hacer la dicc
-        pred = request.form.to_dict()
-        #tomar solo los valores
-        pred = list(pred.values())
+        pred = request.form.to_dict().values()
         pred = list(map(int, pred))
         res = predictForm(pred)
         
